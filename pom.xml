@@ -233,5 +233,37 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+      <id>build-image</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+              <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+              <image>
+                <name>geom/${project.artifactId}:${project.version}</name>
+                <pullPolicy>IF_NOT_PRESENT</pullPolicy>
+                <buildpacks>
+                  <buildpack>paketobuildpacks/microsoft-openjdk</buildpack>
+                  <buildpack>urn:cnb:builder:paketo-buildpacks/java</buildpack>
+                </buildpacks>
+                <buildCache>
+                  <volume>
+                    <name>cache-${project.artifactId}.build</name>
+                  </volume>
+                </buildCache>
+                <launchCache>
+                  <volume>
+                    <name>cache-${project.artifactId}.launch</name>
+                  </volume>
+                </launchCache>
+              </image>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>
