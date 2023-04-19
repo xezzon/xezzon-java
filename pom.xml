@@ -9,6 +9,28 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <name>Xezzon :: Parent</name>
+  <description>Xezzon Maven 工程通用配置</description>
+  <url>https://github.com/xezzon/xezzon-parent.git</url>
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License v3.0</name>
+      <url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git://github.com/xezzon/xezzon-parent.git</connection>
+    <developerConnection>scm:git:ssh://github.com:xezzon/xezzon-parent.git</developerConnection>
+    <url>http://github.com/xezzon/xezzon-parent/tree/master</url>
+  </scm>
+  <developers>
+    <developer>
+      <name>xezzon</name>
+      <email>xezzon@outlook.com</email>
+    </developer>
+  </developers>
+
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
