@@ -6,7 +6,7 @@
 
   <groupId>io.github.xezzon</groupId>
   <artifactId>xezzon-parent</artifactId>
-  <version>1</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Xezzon :: Parent</name>
@@ -229,10 +229,6 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
-      <properties>
-        <!--suppress UnresolvedMavenProperty -->
-        <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
-      </properties>
       <distributionManagement>
         <snapshotRepository>
           <id>ossrh</id>
@@ -277,7 +273,7 @@
             <configuration>
               <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
               <image>
-                <name>geom/${project.artifactId}:${project.version}</name>
+                <name>${project.artifactId}:${project.version}</name>
                 <pullPolicy>IF_NOT_PRESENT</pullPolicy>
                 <buildpacks>
                   <buildpack>paketobuildpacks/microsoft-openjdk</buildpack>
