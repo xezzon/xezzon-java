@@ -252,6 +252,10 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
+            <configuration>
+              <!--suppress UnresolvedMavenProperty -->
+              <passphrase>${env.MAVEN_GPG_PASSPHRASE}</passphrase>
+            </configuration>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
