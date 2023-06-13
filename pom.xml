@@ -6,7 +6,7 @@
 
   <groupId>io.github.xezzon</groupId>
   <artifactId>xezzon-parent</artifactId>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Xezzon :: Parent</name>
@@ -44,6 +44,7 @@
     <testcontainers.version>1.18.0</testcontainers.version>
     <jetbrains-annotations.version>24.0.1</jetbrains-annotations.version>
     <mapstruct.version>1.5.4.Final</mapstruct.version>
+    <grpc.version>1.54.1</grpc.version>
     <!-- 插件版本 -->
     <maven-compiler.version>3.11.0</maven-compiler.version>
     <maven-surefire.version>3.0.0</maven-surefire.version>
@@ -89,6 +90,13 @@
         <scope>import</scope>
       </dependency>
       <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-bom</artifactId>
+        <version>${grpc.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
         <groupId>cn.hutool</groupId>
         <artifactId>hutool-bom</artifactId>
         <version>${hutool.version}</version>
@@ -116,6 +124,12 @@
   </dependencyManagement>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -277,38 +291,6 @@
               <serverId>ossrh</serverId>
               <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>build-image</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <configuration>
-              <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
-              <image>
-                <name>${project.artifactId}:${project.version}</name>
-                <pullPolicy>IF_NOT_PRESENT</pullPolicy>
-                <buildpacks>
-                  <buildpack>paketobuildpacks/microsoft-openjdk</buildpack>
-                  <buildpack>urn:cnb:builder:paketo-buildpacks/java</buildpack>
-                </buildpacks>
-                <buildCache>
-                  <volume>
-                    <name>cache-${project.artifactId}.build</name>
-                  </volume>
-                </buildCache>
-                <launchCache>
-                  <volume>
-                    <name>cache-${project.artifactId}.launch</name>
-                  </volume>
-                </launchCache>
-              </image>
             </configuration>
           </plugin>
         </plugins>
