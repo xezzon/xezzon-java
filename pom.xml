@@ -45,6 +45,7 @@
     <jetbrains-annotations.version>24.0.1</jetbrains-annotations.version>
     <mapstruct.version>1.5.4.Final</mapstruct.version>
     <grpc.version>1.54.1</grpc.version>
+    <groovy.version>4.0.12</groovy.version>
     <!-- 插件版本 -->
     <maven-compiler.version>3.11.0</maven-compiler.version>
     <maven-surefire.version>3.0.0</maven-surefire.version>
@@ -107,6 +108,13 @@
         <groupId>org.testcontainers</groupId>
         <artifactId>testcontainers-bom</artifactId>
         <version>${testcontainers.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.groovy</groupId>
+        <artifactId>groovy-bom</artifactId>
+        <version>${groovy.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
