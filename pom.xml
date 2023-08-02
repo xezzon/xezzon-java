@@ -6,7 +6,7 @@
 
   <groupId>io.github.xezzon</groupId>
   <artifactId>xezzon-parent</artifactId>
-  <version>1.4</version>
+  <version>1.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Xezzon :: Parent</name>
