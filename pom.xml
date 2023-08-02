@@ -46,6 +46,7 @@
     <testcontainers.version>1.18.0</testcontainers.version>
     <jetbrains-annotations.version>24.0.1</jetbrains-annotations.version>
     <mapstruct.version>1.5.4.Final</mapstruct.version>
+    <bouncy-castle.version>1.74</bouncy-castle.version>
     <grpc.version>1.54.1</grpc.version>
     <groovy.version>4.0.12</groovy.version>
     <!-- 插件版本 -->
@@ -135,6 +136,11 @@
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
         <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk18on</artifactId>
+        <version>${bouncy-castle.version}</version>
       </dependency>
       <dependency>
         <groupId>com.dtflys.forest</groupId>
