@@ -36,7 +36,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
-    <micronaut.version>3.10.0</micronaut.version>
+    <micronaut.version>4.0.2</micronaut.version>
     <spring-boot.version>3.0.5</spring-boot.version>
     <spring-cloud.version>2022.0.2</spring-cloud.version>
     <querydsl.version>5.0.0</querydsl.version>
