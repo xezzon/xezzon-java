@@ -49,6 +49,7 @@
     <bouncy-castle.version>1.74</bouncy-castle.version>
     <grpc.version>1.54.1</grpc.version>
     <groovy.version>4.0.12</groovy.version>
+    <opentelemetry.version>1.28</opentelemetry.version>
     <!-- 插件版本 -->
     <maven-compiler.version>3.11.0</maven-compiler.version>
     <maven-surefire.version>3.0.0</maven-surefire.version>
