@@ -42,7 +42,7 @@
     <querydsl.version>5.0.0</querydsl.version>
     <guava.version>31.1-jre</guava.version>
     <hutool.version>5.8.18</hutool.version>
-    <forest.version>1.5.32</forest.version>
+    <feign.version>12.5</feign.version>
     <testcontainers.version>1.18.0</testcontainers.version>
     <jetbrains-annotations.version>24.0.1</jetbrains-annotations.version>
     <mapstruct.version>1.5.4.Final</mapstruct.version>
@@ -81,21 +81,6 @@
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcprov-jdk18on</artifactId>
         <version>${bouncy-castle.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.dtflys.forest</groupId>
-        <artifactId>forest</artifactId>
-        <version>${forest.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.dtflys.forest</groupId>
-        <artifactId>forest-spring-boot-starter</artifactId>
-        <version>${forest.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.dtflys.forest</groupId>
-        <artifactId>forest-spring-boot3-starter</artifactId>
-        <version>${forest.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
