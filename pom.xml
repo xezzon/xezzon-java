@@ -172,9 +172,6 @@
   <profiles>
     <profile>
       <id>test</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <build>
         <plugins>
           <plugin>
@@ -186,9 +183,6 @@
     </profile>
     <profile>
       <id>report</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <build>
         <plugins>
           <plugin>
@@ -220,9 +214,6 @@
     </profile>
     <profile>
       <id>release</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <distributionManagement>
         <snapshotRepository>
           <id>ossrh</id>
