@@ -63,6 +63,7 @@
     <smart-doc.version>2.6.7</smart-doc.version>
     <docker-plugin.version>0.42.1</docker-plugin.version>
     <jib-plugin.version>3.3.2</jib-plugin.version>
+    <download-maven-plugin.version>1.7.1</download-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -164,6 +165,11 @@
           <groupId>com.google.cloud.tools</groupId>
           <artifactId>jib-maven-plugin</artifactId>
           <version>${jib-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.googlecode.maven-download-plugin</groupId>
+          <artifactId>download-maven-plugin</artifactId>
+          <version>${download-maven-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
