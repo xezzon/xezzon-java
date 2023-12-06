@@ -50,6 +50,7 @@
     <grpc.version>1.54.1</grpc.version>
     <groovy.version>4.0.12</groovy.version>
     <opentelemetry.version>1.28</opentelemetry.version>
+    <java-jwt.version>4.4.0</java-jwt.version>
     <!-- 插件版本 -->
     <maven-compiler.version>3.11.0</maven-compiler.version>
     <maven-surefire.version>3.0.0</maven-surefire.version>
@@ -82,6 +83,11 @@
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcprov-jdk18on</artifactId>
         <version>${bouncy-castle.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.auth0</groupId>
+        <artifactId>java-jwt</artifactId>
+        <version>${java-jwt.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
