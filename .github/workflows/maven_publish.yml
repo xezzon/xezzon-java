@@ -40,7 +40,7 @@ jobs:
         run: mvn versions:set -DnewVersion=$GITHUB_REF_NAME
 
       - name: Publish to Apache Maven Central
-        run: mvn deploy -DskipTests=true
+        run: mvn deploy -DskipTests=true -P release
         env:
           MAVEN_USERNAME: ${{ vars.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
