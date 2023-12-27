@@ -11,7 +11,7 @@
 
   <name>Xezzon :: Parent</name>
   <description>Xezzon Maven 工程通用配置</description>
-  <url>https://github.com/xezzon/xezzon-parent.git</url>
+  <url>https://github.com/xezzon/xezzon-java.git</url>
   <licenses>
     <license>
       <name>GNU Lesser General Public License v3.0</name>
@@ -20,9 +20,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git://github.com/xezzon/xezzon-parent.git</connection>
-    <developerConnection>scm:git:ssh://github.com:xezzon/xezzon-parent.git</developerConnection>
-    <url>http://github.com/xezzon/xezzon-parent/tree/master</url>
+    <connection>scm:git:git://github.com/xezzon/xezzon-java.git</connection>
+    <developerConnection>scm:git:ssh://github.com:xezzon/xezzon-java.git</developerConnection>
+    <url>http://github.com/xezzon/xezzon-java/tree/master</url>
   </scm>
   <developers>
     <developer>
@@ -36,35 +36,34 @@
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
-    <micronaut.version>4.0.2</micronaut.version>
-    <spring-boot.version>3.0.5</spring-boot.version>
-    <spring-cloud.version>2022.0.2</spring-cloud.version>
-    <querydsl.version>5.0.0</querydsl.version>
-    <guava.version>31.1-jre</guava.version>
-    <hutool.version>5.8.18</hutool.version>
-    <feign.version>12.5</feign.version>
-    <testcontainers.version>1.18.0</testcontainers.version>
-    <jetbrains-annotations.version>24.0.1</jetbrains-annotations.version>
-    <mapstruct.version>1.5.4.Final</mapstruct.version>
-    <bouncy-castle.version>1.74</bouncy-castle.version>
-    <grpc.version>1.54.1</grpc.version>
+    <bouncy-castle.version>1.77</bouncy-castle.version>
+    <guava.version>33.0.0-jre</guava.version>
+    <grpc.version>1.60.1</grpc.version>
     <groovy.version>4.0.12</groovy.version>
-    <opentelemetry.version>1.28</opentelemetry.version>
+    <hutool.version>5.8.24</hutool.version>
     <java-jwt.version>4.4.0</java-jwt.version>
+    <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
+    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <micronaut.version>4.2.2</micronaut.version>
+    <openfeign.version>13.1</openfeign.version>
+    <opentelemetry.version>1.32.0</opentelemetry.version>
+    <querydsl.version>5.0.0</querydsl.version>
+    <spring-boot.version>3.2.1</spring-boot.version>
+    <spring-cloud.version>2023.0.0</spring-cloud.version>
+    <testcontainers.version>1.19.3</testcontainers.version>
     <!-- 插件版本 -->
-    <maven-compiler.version>3.11.0</maven-compiler.version>
-    <maven-surefire.version>3.0.0</maven-surefire.version>
-    <maven-source.version>3.2.1</maven-source.version>
-    <maven-javadoc.version>3.5.0</maven-javadoc.version>
-    <maven-gpg.version>3.0.1</maven-gpg.version>
-    <nexus-staging.version>1.6.13</nexus-staging.version>
-    <maven-resources.version>3.3.1</maven-resources.version>
-    <flatten-plugin.version>1.4.1</flatten-plugin.version>
-    <transformer-plugin.version>0.5.0</transformer-plugin.version>
-    <smart-doc.version>2.6.7</smart-doc.version>
-    <docker-plugin.version>0.42.1</docker-plugin.version>
-    <jib-plugin.version>3.3.2</jib-plugin.version>
-    <download-maven-plugin.version>1.7.1</download-maven-plugin.version>
+    <download-maven-plugin.version>1.8.0</download-maven-plugin.version>
+    <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+    <jib-maven-plugin.version>3.4.0</jib-maven-plugin.version>
+    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+    <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+    <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+    <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+    <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
+    <maven-surefire-plugin.version>3.2.3</maven-surefire-plugin.version>
+    <smart-doc-maven-plugin.version>2.7.7</smart-doc-maven-plugin.version>
+    <transformer-maven-plugin.version>0.5.0</transformer-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -75,9 +74,9 @@
         <version>${jetbrains-annotations.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.mapstruct</groupId>
-        <artifactId>mapstruct</artifactId>
-        <version>${mapstruct.version}</version>
+        <groupId>com.auth0</groupId>
+        <artifactId>java-jwt</artifactId>
+        <version>${java-jwt.version}</version>
       </dependency>
       <dependency>
         <groupId>org.bouncycastle</groupId>
@@ -85,9 +84,81 @@
         <version>${bouncy-castle.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.auth0</groupId>
-        <artifactId>java-jwt</artifactId>
-        <version>${java-jwt.version}</version>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.querydsl</groupId>
+        <artifactId>querydsl-bom</artifactId>
+        <version>${querydsl.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava-bom</artifactId>
+        <version>${guava.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-bom</artifactId>
+        <version>${openfeign.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-bom</artifactId>
+        <version>${grpc.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-bom</artifactId>
+        <version>${hutool.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.opentelemetry</groupId>
+        <artifactId>opentelemetry-bom</artifactId>
+        <version>${opentelemetry.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.opentelemetry.instrumentation</groupId>
+        <artifactId>opentelemetry-instrumentation-bom</artifactId>
+        <version>${opentelemetry.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>testcontainers-bom</artifactId>
+        <version>${testcontainers.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.micronaut.platform</groupId>
+        <artifactId>micronaut-platform</artifactId>
+        <version>${micronaut.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.groovy</groupId>
+        <artifactId>groovy-bom</artifactId>
+        <version>${groovy.version}</version>
+        <type>pom</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -102,44 +173,69 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>com.github.shalousun</groupId>
+          <artifactId>smart-doc-maven-plugin</artifactId>
+          <version>${smart-doc-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>${jib-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.googlecode.maven-download-plugin</groupId>
+          <artifactId>download-maven-plugin</artifactId>
+          <version>${download-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven-compiler.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>${maven-surefire.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${maven-surefire.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>${maven-source.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${maven-javadoc.version}</version>
+          <version>${maven-compiler-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>${maven-gpg.version}</version>
+          <version>${maven-gpg-plugin.version}</version>
         </plugin>
         <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging.version}</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-javadoc-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>${maven-resources.version}</version>
+          <version>${maven-resources-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${maven-source-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven-surefire-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>${maven-surefire-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>flatten-maven-plugin</artifactId>
+          <version>${flatten-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.eclipse.transformer</groupId>
+          <artifactId>transformer-maven-plugin</artifactId>
+          <version>${transformer-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>${nexus-staging-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
@@ -147,35 +243,10 @@
           <version>${spring-boot.version}</version>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>flatten-maven-plugin</artifactId>
-          <version>${flatten-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.transformer</groupId>
-          <artifactId>transformer-maven-plugin</artifactId>
-          <version>${transformer-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.github.shalousun</groupId>
-          <artifactId>smart-doc-maven-plugin</artifactId>
-          <version>${smart-doc.version}</version>
-        </plugin>
-        <plugin>
           <!-- @deprecated @link{https://github.com/GoogleContainerTools/jib} -->
           <groupId>io.fabric8</groupId>
           <artifactId>docker-maven-plugin</artifactId>
-          <version>${docker-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.google.cloud.tools</groupId>
-          <artifactId>jib-maven-plugin</artifactId>
-          <version>${jib-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.googlecode.maven-download-plugin</groupId>
-          <artifactId>download-maven-plugin</artifactId>
-          <version>${download-maven-plugin.version}</version>
+          <version>0.42.1</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -199,24 +270,24 @@
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-            <executions>
-              <execution>
-                <phase>package</phase>
-                <goals>
-                  <goal>jar-no-fork</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
             <executions>
               <execution>
                 <phase>package</phase>
                 <goals>
                   <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar-no-fork</goal>
                 </goals>
               </execution>
             </executions>
