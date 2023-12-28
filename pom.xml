@@ -93,72 +93,84 @@
         <artifactId>querydsl-bom</artifactId>
         <version>${querydsl.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava-bom</artifactId>
         <version>${guava.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.github.openfeign</groupId>
         <artifactId>feign-bom</artifactId>
         <version>${openfeign.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.grpc</groupId>
         <artifactId>grpc-bom</artifactId>
         <version>${grpc.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>cn.hutool</groupId>
         <artifactId>hutool-bom</artifactId>
         <version>${hutool.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.opentelemetry</groupId>
         <artifactId>opentelemetry-bom</artifactId>
         <version>${opentelemetry.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.opentelemetry.instrumentation</groupId>
         <artifactId>opentelemetry-instrumentation-bom</artifactId>
         <version>${opentelemetry.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>testcontainers-bom</artifactId>
         <version>${testcontainers.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-platform</artifactId>
         <version>${micronaut.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
         <version>${spring-cloud.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.groovy</groupId>
         <artifactId>groovy-bom</artifactId>
         <version>${groovy.version}</version>
         <type>pom</type>
+        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
