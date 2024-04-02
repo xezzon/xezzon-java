@@ -37,25 +37,27 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
     <bouncy-castle.version>1.77</bouncy-castle.version>
-    <guava.version>33.0.0-jre</guava.version>
-    <grpc.version>1.60.1</grpc.version>
+    <guava.version>33.1.0-jre</guava.version>
+    <grpc.version>1.62.2</grpc.version>
     <groovy.version>4.0.12</groovy.version>
     <hutool.version>5.8.24</hutool.version>
     <java-jwt.version>4.4.0</java-jwt.version>
     <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
-    <micronaut.version>4.2.2</micronaut.version>
+    <micronaut.version>4.4.0</micronaut.version>
     <openfeign.version>13.1</openfeign.version>
-    <opentelemetry.version>1.32.0</opentelemetry.version>
-    <querydsl.version>5.0.0</querydsl.version>
+    <opentelemetry.version>1.36.0</opentelemetry.version>
+    <opentelemetry-instrumentation.version>2.2.0</opentelemetry-instrumentation.version>
+    <querydsl.version>5.1.0</querydsl.version>
     <spring-boot.version>3.2.1</spring-boot.version>
     <spring-cloud.version>2023.0.0</spring-cloud.version>
-    <testcontainers.version>1.19.3</testcontainers.version>
+    <testcontainers.version>1.19.7</testcontainers.version>
     <!-- 插件版本 -->
+    <central-publishing-maven-plugin.version>0.4.0</central-publishing-maven-plugin.version>
     <download-maven-plugin.version>1.8.0</download-maven-plugin.version>
-    <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+    <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
     <jib-maven-plugin.version>3.4.0</jib-maven-plugin.version>
-    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+    <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
     <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
     <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
@@ -134,7 +136,7 @@
       <dependency>
         <groupId>io.opentelemetry.instrumentation</groupId>
         <artifactId>opentelemetry-instrumentation-bom</artifactId>
-        <version>${opentelemetry.version}</version>
+        <version>${opentelemetry-instrumentation.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -274,6 +276,11 @@
           <groupId>org.eclipse.transformer</groupId>
           <artifactId>transformer-maven-plugin</artifactId>
           <version>${transformer-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
