@@ -52,6 +52,7 @@
     <spring-boot.version>3.2.1</spring-boot.version>
     <spring-cloud.version>2023.0.0</spring-cloud.version>
     <testcontainers.version>1.19.7</testcontainers.version>
+    <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
     <!-- 插件版本 -->
     <central-publishing-maven-plugin.version>0.4.0</central-publishing-maven-plugin.version>
     <download-maven-plugin.version>1.8.0</download-maven-plugin.version>
@@ -91,6 +92,12 @@
         <artifactId>mapstruct</artifactId>
         <version>${mapstruct.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>transmittable-thread-local</artifactId>
+        <version>${transmittable-thread-local.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>com.querydsl</groupId>
         <artifactId>querydsl-bom</artifactId>
