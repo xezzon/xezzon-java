@@ -170,6 +170,12 @@
         <version>${micronaut.version}</version>
         <type>pom</type>
         <scope>import</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>io.micronaut.spring</groupId>
+            <artifactId>micronaut-spring-bom</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
