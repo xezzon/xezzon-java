@@ -9,9 +9,9 @@
   <version>3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Xezzon :: Parent</name>
+  <name>${project.groupId}:${project.artifactId}</name>
   <description>Xezzon Maven 工程通用配置</description>
-  <url>https://github.com/xezzon/xezzon-java.git</url>
+  <url>https://github.com/xezzon/xezzon-java</url>
   <licenses>
     <license>
       <name>GNU Lesser General Public License v3.0</name>
@@ -20,8 +20,8 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git://github.com/xezzon/xezzon-java.git</connection>
-    <developerConnection>scm:git:ssh://github.com:xezzon/xezzon-java.git</developerConnection>
+    <connection>scm:git:https://github.com/xezzon/xezzon-java.git</connection>
+    <developerConnection>scm:git:git@github.com:xezzon/xezzon-java.git</developerConnection>
     <url>http://github.com/xezzon/xezzon-java/tree/master</url>
   </scm>
   <developers>
