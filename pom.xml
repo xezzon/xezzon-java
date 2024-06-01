@@ -9,9 +9,9 @@
   <version>3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Xezzon :: Parent</name>
+  <name>${project.groupId}:${project.artifactId}</name>
   <description>Xezzon Maven 工程通用配置</description>
-  <url>https://github.com/xezzon/xezzon-java.git</url>
+  <url>https://github.com/xezzon/xezzon-java</url>
   <licenses>
     <license>
       <name>GNU Lesser General Public License v3.0</name>
@@ -20,8 +20,8 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git://github.com/xezzon/xezzon-java.git</connection>
-    <developerConnection>scm:git:ssh://github.com:xezzon/xezzon-java.git</developerConnection>
+    <connection>scm:git:https://github.com/xezzon/xezzon-java.git</connection>
+    <developerConnection>scm:git:git@github.com:xezzon/xezzon-java.git</developerConnection>
     <url>http://github.com/xezzon/xezzon-java/tree/master</url>
   </scm>
   <developers>
@@ -51,9 +51,11 @@
     <querydsl.version>5.1.0</querydsl.version>
     <spring-boot.version>3.3.0</spring-boot.version>
     <spring-cloud.version>2023.0.0</spring-cloud.version>
+    <springdoc.version>2.5.0</springdoc.version>
     <testcontainers.version>1.19.8</testcontainers.version>
     <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
     <!-- 插件版本 -->
+    <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
     <central-publishing-maven-plugin.version>0.4.0</central-publishing-maven-plugin.version>
     <download-maven-plugin.version>1.9.0</download-maven-plugin.version>
     <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
@@ -94,6 +96,11 @@
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
         <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+        <version>${springdoc.version}</version>
       </dependency>
       <dependency>
         <groupId>com.alibaba</groupId>
@@ -163,6 +170,12 @@
         <version>${micronaut.version}</version>
         <type>pom</type>
         <scope>import</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>io.micronaut.spring</groupId>
+            <artifactId>micronaut-spring-bom</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -286,6 +299,11 @@
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>${build-helper-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
           <artifactId>flatten-maven-plugin</artifactId>
           <version>${flatten-maven-plugin.version}</version>
         </plugin>
@@ -343,11 +361,44 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
           </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>report</id>
+                <phase>test</phase>
+                <goals>
+                  <goal>report</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
     <profile>
       <id>report</id>
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <configuration>
+              <show>public</show>
+            </configuration>
+          </plugin>
+        </plugins>
+      </reporting>
+    </profile>
+    <profile>
+      <id>release</id>
+      <distributionManagement>
+        <snapshotRepository>
+          <id>ossrh</id>
+          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+      </distributionManagement>
       <build>
         <plugins>
           <plugin>
@@ -374,19 +425,6 @@
               </execution>
             </executions>
           </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>release</id>
-      <distributionManagement>
-        <snapshotRepository>
-          <id>ossrh</id>
-          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-      </distributionManagement>
-      <build>
-        <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
