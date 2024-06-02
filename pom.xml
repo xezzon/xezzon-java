@@ -22,7 +22,7 @@
   <scm>
     <connection>scm:git:https://github.com/xezzon/xezzon-java.git</connection>
     <developerConnection>scm:git:git@github.com:xezzon/xezzon-java.git</developerConnection>
-    <url>http://github.com/xezzon/xezzon-java/tree/master</url>
+    <url>http://github.com/xezzon/xezzon-java/tree/main</url>
   </scm>
   <developers>
     <developer>
