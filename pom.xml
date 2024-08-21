@@ -37,23 +37,23 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
     <bouncy-castle.version>1.78.1</bouncy-castle.version>
-    <guava.version>33.2.0-jre</guava.version>
-    <grpc.version>1.64.0</grpc.version>
+    <guava.version>33.3.0-jre</guava.version>
+    <grpc.version>1.66.0</grpc.version>
     <groovy.version>4.0.21</groovy.version>
     <hutool.version>5.8.24</hutool.version>
     <java-jwt.version>4.4.0</java-jwt.version>
     <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
-    <mapstruct.version>1.5.5.Final</mapstruct.version>
-    <micronaut.version>4.4.0</micronaut.version>
-    <openfeign.version>13.2.1</openfeign.version>
-    <openfeign-querydsl.version>6.3</openfeign-querydsl.version>
-    <opentelemetry.version>1.38.0</opentelemetry.version>
-    <opentelemetry-instrumentation.version>2.3.0</opentelemetry-instrumentation.version>
+    <mapstruct.version>1.6.0</mapstruct.version>
+    <micronaut.version>4.5.1</micronaut.version>
+    <openfeign.version>13.3</openfeign.version>
+    <openfeign-querydsl.version>6.6</openfeign-querydsl.version>
+    <opentelemetry.version>1.41.0</opentelemetry.version>
+    <opentelemetry-instrumentation.version>2.7.0</opentelemetry-instrumentation.version>
     <querydsl.version>5.1.0</querydsl.version>
-    <spring-boot.version>3.3.0</spring-boot.version>
-    <spring-cloud.version>2023.0.0</spring-cloud.version>
-    <springdoc.version>2.5.0</springdoc.version>
-    <testcontainers.version>1.19.8</testcontainers.version>
+    <spring-boot.version>3.3.2</spring-boot.version>
+    <spring-cloud.version>2023.0.3</spring-cloud.version>
+    <springdoc.version>2.6.0</springdoc.version>
+    <testcontainers.version>1.20.1</testcontainers.version>
     <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
     <!-- 插件版本 -->
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
@@ -61,7 +61,7 @@
     <download-maven-plugin.version>1.9.0</download-maven-plugin.version>
     <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-    <jib-maven-plugin.version>3.4.2</jib-maven-plugin.version>
+    <jib-maven-plugin.version>3.4.3</jib-maven-plugin.version>
     <license-maven-plugin.version>2.4.0</license-maven-plugin.version>
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
     <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
@@ -75,7 +75,7 @@
     <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
     <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
     <protoc.version>3.25.1</protoc.version>
-    <smart-doc-maven-plugin.version>3.0.4</smart-doc-maven-plugin.version>
+    <smart-doc-maven-plugin.version>3.0.7</smart-doc-maven-plugin.version>
     <transformer-maven-plugin.version>0.5.0</transformer-maven-plugin.version>
   </properties>
 
@@ -104,6 +104,11 @@
       <dependency>
         <groupId>org.springdoc</groupId>
         <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
         <version>${springdoc.version}</version>
       </dependency>
       <dependency>
@@ -229,11 +234,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>com.ly.smart-doc</groupId>
-          <artifactId>smart-doc-maven-plugin</artifactId>
-          <version>${smart-doc-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
           <groupId>com.google.cloud.tools</groupId>
           <artifactId>jib-maven-plugin</artifactId>
           <version>${jib-maven-plugin.version}</version>
@@ -242,6 +242,16 @@
           <groupId>com.googlecode.maven-download-plugin</groupId>
           <artifactId>download-maven-plugin</artifactId>
           <version>${download-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.ly.smart-doc</groupId>
+          <artifactId>smart-doc-maven-plugin</artifactId>
+          <version>${smart-doc-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>io.github.xezzon</groupId>
+          <artifactId>smart-doc-maven-plugin</artifactId>
+          <version>${smart-doc-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
