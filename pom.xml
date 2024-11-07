@@ -42,7 +42,7 @@
     <groovy.version>4.0.21</groovy.version>
     <hutool.version>5.8.24</hutool.version>
     <java-jwt.version>4.4.0</java-jwt.version>
-    <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
+    <jetbrains-annotations.version>26.0.1</jetbrains-annotations.version>
     <mapstruct.version>1.6.0</mapstruct.version>
     <micronaut.version>4.5.1</micronaut.version>
     <openfeign.version>13.3</openfeign.version>
