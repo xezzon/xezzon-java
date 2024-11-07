@@ -43,7 +43,7 @@
     <hutool.version>5.8.24</hutool.version>
     <java-jwt.version>4.4.0</java-jwt.version>
     <jetbrains-annotations.version>26.0.1</jetbrains-annotations.version>
-    <mapstruct.version>1.6.0</mapstruct.version>
+    <mapstruct.version>1.6.2</mapstruct.version>
     <micronaut.version>4.5.1</micronaut.version>
     <openfeign.version>13.3</openfeign.version>
     <openfeign-querydsl.version>6.6</openfeign-querydsl.version>
