@@ -36,47 +36,55 @@
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
-    <bouncy-castle.version>1.78.1</bouncy-castle.version>
-    <guava.version>33.3.0-jre</guava.version>
-    <grpc.version>1.66.0</grpc.version>
+    <bouncy-castle.version>1.79</bouncy-castle.version>
+    <guava.version>33.3.1-jre</guava.version>
+    <grpc.version>1.69.0</grpc.version>
     <groovy.version>4.0.21</groovy.version>
-    <hutool.version>5.8.24</hutool.version>
     <java-jwt.version>4.4.0</java-jwt.version>
-    <jetbrains-annotations.version>26.0.1</jetbrains-annotations.version>
-    <mapstruct.version>1.6.2</mapstruct.version>
-    <micronaut.version>4.5.1</micronaut.version>
-    <openfeign.version>13.3</openfeign.version>
-    <openfeign-querydsl.version>6.6</openfeign-querydsl.version>
-    <opentelemetry.version>1.43.0</opentelemetry.version>
-    <opentelemetry-instrumentation.version>2.7.0</opentelemetry-instrumentation.version>
-    <querydsl.version>5.1.0</querydsl.version>
-    <spring-boot.version>3.3.2</spring-boot.version>
-    <spring-cloud.version>2023.0.3</spring-cloud.version>
-    <springdoc.version>2.6.0</springdoc.version>
-    <testcontainers.version>1.20.1</testcontainers.version>
+    <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
+    <mapstruct.version>1.6.0</mapstruct.version>
+    <openfeign.version>13.5</openfeign.version>
+    <opentelemetry.version>1.45.0</opentelemetry.version>
+    <opentelemetry-instrumentation.version>2.10.0</opentelemetry-instrumentation.version>
+    <protobuf.version>4.29.1</protobuf.version>
+    <spring-boot.version>3.4.0</spring-boot.version>
+    <springdoc.version>2.7.0</springdoc.version>
+    <testcontainers.version>1.20.4</testcontainers.version>
     <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
     <!-- 插件版本 -->
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-    <central-publishing-maven-plugin.version>0.5.0</central-publishing-maven-plugin.version>
-    <download-maven-plugin.version>1.9.0</download-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.6.0</central-publishing-maven-plugin.version>
+    <download-maven-plugin.version>1.13.0</download-maven-plugin.version>
     <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-    <jib-maven-plugin.version>3.4.3</jib-maven-plugin.version>
-    <license-maven-plugin.version>2.4.0</license-maven-plugin.version>
+    <jib-maven-plugin.version>3.4.4</jib-maven-plugin.version>
+    <license-maven-plugin.version>2.5.0</license-maven-plugin.version>
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-    <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
-    <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
-    <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+    <maven-deploy-plugin.version>3.1.3</maven-deploy-plugin.version>
+    <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
+    <maven-project-info-reports-plugin.version>3.8.0</maven-project-info-reports-plugin.version>
+    <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
     <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-    <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
-    <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
     <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
-    <protoc.version>3.25.1</protoc.version>
     <smart-doc-maven-plugin.version>3.0.7</smart-doc-maven-plugin.version>
-    <transformer-maven-plugin.version>0.5.0</transformer-maven-plugin.version>
+    <transformer-maven-plugin.version>1.0.0</transformer-maven-plugin.version>
+    <!-- 幽灵依赖 -->
+    <!-- cn.hutool/hutool-bom -->
+    <hutool.version>5.8.34</hutool.version>
+    <!-- io.micronaut.platform/micronaut-platform -->
+    <micronaut.version>4.7.1</micronaut.version>
+    <!-- org.springframework.cloud/spring-cloud-dependencies -->
+    <spring-cloud.version>2024.0.0</spring-cloud.version>
+    <!-- io.github.openfeign.querydsl/querydsl-bom -->
+    <openfeign-querydsl.version>6.9</openfeign-querydsl.version>
+    <!-- com.querydsl/querydsl-bom -->
+    <querydsl.version>5.1.0</querydsl.version>
+    <!-- nexus-staging-maven-plugin -->
+    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -123,13 +131,6 @@
       </dependency>
 
       <dependency>
-        <groupId>com.querydsl</groupId>
-        <artifactId>querydsl-bom</artifactId>
-        <version>${querydsl.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava-bom</artifactId>
         <version>${guava.version}</version>
@@ -144,9 +145,9 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>io.github.openfeign.querydsl</groupId>
-        <artifactId>querydsl-bom</artifactId>
-        <version>${openfeign-querydsl.version}</version>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-bom</artifactId>
+        <version>${protobuf.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -154,13 +155,6 @@
         <groupId>io.grpc</groupId>
         <artifactId>grpc-bom</artifactId>
         <version>${grpc.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>cn.hutool</groupId>
-        <artifactId>hutool-bom</artifactId>
-        <version>${hutool.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -179,26 +173,6 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>org.testcontainers</groupId>
-        <artifactId>testcontainers-bom</artifactId>
-        <version>${testcontainers.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>io.micronaut.platform</groupId>
-        <artifactId>micronaut-platform</artifactId>
-        <version>${micronaut.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>io.micronaut.spring</groupId>
-            <artifactId>micronaut-spring-bom</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
@@ -206,9 +180,9 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud.version}</version>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>testcontainers-bom</artifactId>
+        <version>${testcontainers.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -268,6 +242,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
           <version>${maven-gpg-plugin.version}</version>
         </plugin>
@@ -296,10 +275,12 @@
               <configuration>
                 <createDependencyReducedPom>false</createDependencyReducedPom>
                 <transformers>
-                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <mainClass>${exec.mainClass}</mainClass>
                   </transformer>
-                  <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                  <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                 </transformers>
                 <filters>
                   <filter>
@@ -359,17 +340,12 @@
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>${jacoco.version}</version>
+          <version>${jacoco-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.sonatype.central</groupId>
           <artifactId>central-publishing-maven-plugin</artifactId>
           <version>${central-publishing-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
@@ -381,16 +357,14 @@
           <artifactId>protobuf-maven-plugin</artifactId>
           <version>0.6.1</version>
           <configuration>
-            <protocArtifact>com.google.protobuf:protoc:${protoc.version}:exe:${os.detected.classifier}</protocArtifact>
+            <protocArtifact>
+              com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}
+            </protocArtifact>
             <pluginId>grpc-java</pluginId>
-            <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
+            <pluginArtifact>
+              io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
+            </pluginArtifact>
           </configuration>
-        </plugin>
-        <plugin>
-          <!-- @deprecated @link{https://github.com/GoogleContainerTools/jib} -->
-          <groupId>io.fabric8</groupId>
-          <artifactId>docker-maven-plugin</artifactId>
-          <version>0.42.1</version>
         </plugin>
       </plugins>
     </pluginManagement>
