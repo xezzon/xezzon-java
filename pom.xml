@@ -37,7 +37,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
     <bouncy-castle.version>1.79</bouncy-castle.version>
-    <guava.version>33.3.1-jre</guava.version>
+    <guava.version>33.4.0-jre</guava.version>
     <grpc.version>1.69.0</grpc.version>
     <groovy.version>4.0.21</groovy.version>
     <java-jwt.version>4.4.0</java-jwt.version>
