@@ -46,7 +46,7 @@
     <openfeign.version>13.5</openfeign.version>
     <opentelemetry.version>1.45.0</opentelemetry.version>
     <opentelemetry-instrumentation.version>2.11.0</opentelemetry-instrumentation.version>
-    <protobuf.version>4.29.2</protobuf.version>
+    <protobuf.version>4.29.3</protobuf.version>
     <spring-boot.version>3.4.1</spring-boot.version>
     <springdoc.version>2.8.1</springdoc.version>
     <testcontainers.version>1.20.4</testcontainers.version>
