@@ -41,7 +41,7 @@
     <grpc.version>1.69.0</grpc.version>
     <groovy.version>4.0.21</groovy.version>
     <java-jwt.version>4.4.0</java-jwt.version>
-    <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
+    <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
     <mapstruct.version>1.6.0</mapstruct.version>
     <openfeign.version>13.5</openfeign.version>
     <opentelemetry.version>1.46.0</opentelemetry.version>
