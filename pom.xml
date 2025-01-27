@@ -39,7 +39,7 @@
     <bouncy-castle.version>1.80</bouncy-castle.version>
     <guava.version>33.4.0-jre</guava.version>
     <grpc.version>1.69.0</grpc.version>
-    <groovy.version>4.0.21</groovy.version>
+    <groovy.version>4.0.25</groovy.version>
     <java-jwt.version>4.4.0</java-jwt.version>
     <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
     <mapstruct.version>1.6.0</mapstruct.version>
