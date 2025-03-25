@@ -47,7 +47,7 @@
     <opentelemetry.version>1.48.0</opentelemetry.version>
     <opentelemetry-instrumentation.version>2.14.0</opentelemetry-instrumentation.version>
     <protobuf.version>4.30.0</protobuf.version>
-    <spring-boot.version>3.4.3</spring-boot.version>
+    <spring-boot.version>3.4.4</spring-boot.version>
     <springdoc.version>2.8.4</springdoc.version>
     <testcontainers.version>1.20.4</testcontainers.version>
     <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
