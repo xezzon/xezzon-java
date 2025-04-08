@@ -56,7 +56,7 @@
     <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
     <download-maven-plugin.version>2.0.0</download-maven-plugin.version>
     <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
-    <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
     <jib-maven-plugin.version>3.4.4</jib-maven-plugin.version>
     <license-maven-plugin.version>2.5.0</license-maven-plugin.version>
     <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
