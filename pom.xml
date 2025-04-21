@@ -38,7 +38,7 @@
     <!-- 依赖版本 -->
     <bouncy-castle.version>1.80</bouncy-castle.version>
     <guava.version>33.4.0-jre</guava.version>
-    <grpc.version>1.71.0</grpc.version>
+    <grpc.version>1.72.0</grpc.version>
     <groovy.version>4.0.26</groovy.version>
     <java-jwt.version>4.5.0</java-jwt.version>
     <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
