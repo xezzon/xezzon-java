@@ -44,7 +44,7 @@
     <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
     <mapstruct.version>1.6.0</mapstruct.version>
     <openfeign.version>13.6</openfeign.version>
-    <opentelemetry.version>1.49.0</opentelemetry.version>
+    <opentelemetry.version>1.50.0</opentelemetry.version>
     <opentelemetry-instrumentation.version>2.15.0</opentelemetry-instrumentation.version>
     <protobuf.version>4.30.0</protobuf.version>
     <spring-boot.version>3.4.3</spring-boot.version>
