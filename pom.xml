@@ -37,42 +37,15 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
     <bouncy-castle.version>1.80</bouncy-castle.version>
-    <guava.version>33.4.0-jre</guava.version>
     <grpc.version>1.72.0</grpc.version>
-    <groovy.version>4.0.26</groovy.version>
-    <java-jwt.version>4.5.0</java-jwt.version>
-    <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
     <mapstruct.version>1.6.0</mapstruct.version>
-    <openfeign.version>13.6</openfeign.version>
     <opentelemetry.version>1.50.0</opentelemetry.version>
     <opentelemetry-instrumentation.version>2.15.0</opentelemetry-instrumentation.version>
     <protobuf-java.version>4.30.2</protobuf-java.version>
     <spring-boot.version>3.4.3</spring-boot.version>
-    <spring-grpc.version>0.8.0</spring-grpc.version>
-    <springdoc.version>2.8.4</springdoc.version>
-    <testcontainers.version>1.21.0</testcontainers.version>
-    <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
+    <therapi-runtime-javadoc.version>0.15.0</therapi-runtime-javadoc.version>
     <!-- 插件版本 -->
-    <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-    <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
-    <download-maven-plugin.version>2.0.0</download-maven-plugin.version>
-    <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
-    <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-    <jib-maven-plugin.version>3.4.4</jib-maven-plugin.version>
-    <license-maven-plugin.version>2.5.0</license-maven-plugin.version>
-    <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-    <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
-    <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
-    <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
-    <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
-    <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-    <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
-    <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
-    <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
     <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
-    <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
-    <smart-doc-maven-plugin.version>3.0.7</smart-doc-maven-plugin.version>
-    <transformer-maven-plugin.version>1.0.0</transformer-maven-plugin.version>
     <!-- 幽灵依赖 -->
     <!-- cn.hutool/hutool-bom -->
     <hutool.version>5.8.34</hutool.version>
@@ -86,6 +59,10 @@
     <querydsl.version>5.1.0</querydsl.version>
     <!-- nexus-staging-maven-plugin -->
     <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+    <!-- com.alibaba/transmittable-thread-local -->
+    <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
+    <!-- com.ly.smart-doc/smart-doc-maven-plugin -->
+    <smart-doc-maven-plugin.version>3.0.7</smart-doc-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -93,12 +70,12 @@
       <dependency>
         <groupId>org.jetbrains</groupId>
         <artifactId>annotations</artifactId>
-        <version>${jetbrains-annotations.version}</version>
+        <version>26.0.2</version>
       </dependency>
       <dependency>
         <groupId>com.auth0</groupId>
         <artifactId>java-jwt</artifactId>
-        <version>${java-jwt.version}</version>
+        <version>4.5.0</version>
       </dependency>
       <dependency>
         <groupId>org.bouncycastle</groupId>
@@ -116,39 +93,39 @@
         <version>${mapstruct.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.springdoc</groupId>
-        <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-        <version>${springdoc.version}</version>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct-processor</artifactId>
+        <version>${mapstruct.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.springdoc</groupId>
-        <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-        <version>${springdoc.version}</version>
+        <groupId>com.github.therapi</groupId>
+        <artifactId>therapi-runtime-javadoc</artifactId>
+        <version>${therapi-runtime-javadoc.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>transmittable-thread-local</artifactId>
-        <version>${transmittable-thread-local.version}</version>
+        <groupId>com.github.therapi</groupId>
+        <artifactId>therapi-runtime-javadoc-scribe</artifactId>
+        <version>${therapi-runtime-javadoc.version}</version>
       </dependency>
 
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava-bom</artifactId>
-        <version>${guava.version}</version>
+        <version>33.4.0-jre</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.github.openfeign</groupId>
         <artifactId>feign-bom</artifactId>
-        <version>${openfeign.version}</version>
+        <version>13.6</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.springframework.grpc</groupId>
         <artifactId>spring-grpc-dependencies</artifactId>
-        <version>${spring-grpc.version}</version>
+        <version>0.8.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -162,7 +139,7 @@
       <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>testcontainers-bom</artifactId>
-        <version>${testcontainers.version}</version>
+        <version>1.21.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -181,9 +158,16 @@
         <scope>import</scope>
       </dependency>
       <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-bom</artifactId>
+        <version>2.8.8</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
         <groupId>org.apache.groovy</groupId>
         <artifactId>groovy-bom</artifactId>
-        <version>${groovy.version}</version>
+        <version>4.0.26</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -207,7 +191,7 @@
       <extension>
         <groupId>kr.motd.maven</groupId>
         <artifactId>os-maven-plugin</artifactId>
-        <version>${os-maven-plugin.version}</version>
+        <version>1.7.1</version>
       </extension>
     </extensions>
     <pluginManagement>
@@ -215,27 +199,17 @@
         <plugin>
           <groupId>com.google.cloud.tools</groupId>
           <artifactId>jib-maven-plugin</artifactId>
-          <version>${jib-maven-plugin.version}</version>
+          <version>3.4.4</version>
         </plugin>
         <plugin>
           <groupId>io.github.download-maven-plugin</groupId>
           <artifactId>download-maven-plugin</artifactId>
-          <version>${download-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.ly.smart-doc</groupId>
-          <artifactId>smart-doc-maven-plugin</artifactId>
-          <version>${smart-doc-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>io.github.xezzon</groupId>
-          <artifactId>smart-doc-maven-plugin</artifactId>
-          <version>${smart-doc-maven-plugin.version}</version>
+          <version>2.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven-compiler-plugin.version}</version>
+          <version>3.14.0</version>
           <configuration>
             <parameters>true</parameters>
           </configuration>
@@ -243,32 +217,32 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>${maven-deploy-plugin.version}</version>
+          <version>3.1.4</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>${maven-gpg-plugin.version}</version>
+          <version>3.2.7</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${maven-javadoc-plugin.version}</version>
+          <version>3.11.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>${maven-project-info-reports-plugin.version}</version>
+          <version>3.9.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>${maven-resources-plugin.version}</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>${maven-shade-plugin.version}</version>
+          <version>3.6.0</version>
           <executions>
             <execution>
               <id>default-shade</id>
@@ -300,12 +274,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>${maven-site-plugin.version}</version>
+          <version>3.12.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>${maven-source-plugin.version}</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -320,32 +294,45 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>${build-helper-maven-plugin.version}</version>
+          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>flatten-maven-plugin</artifactId>
-          <version>${flatten-maven-plugin.version}</version>
+          <version>1.7.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>${license-maven-plugin.version}</version>
+          <version>2.5.0</version>
         </plugin>
         <plugin>
           <groupId>org.eclipse.transformer</groupId>
           <artifactId>transformer-maven-plugin</artifactId>
-          <version>${transformer-maven-plugin.version}</version>
+          <version>1.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>${jacoco-maven-plugin.version}</version>
+          <version>0.8.12</version>
         </plugin>
         <plugin>
           <groupId>org.sonatype.central</groupId>
           <artifactId>central-publishing-maven-plugin</artifactId>
-          <version>${central-publishing-maven-plugin.version}</version>
+          <version>0.7.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.springdoc</groupId>
+          <artifactId>springdoc-openapi-maven-plugin</artifactId>
+          <version>1.5</version>
+          <executions>
+            <execution>
+              <id>integration-test</id>
+              <goals>
+                <goal>generate</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
