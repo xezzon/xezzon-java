@@ -189,9 +189,9 @@
     </testResources>
     <extensions>
       <extension>
-        <groupId>kr.motd.maven</groupId>
-        <artifactId>os-maven-plugin</artifactId>
-        <version>1.7.1</version>
+        <groupId>eu.maveniverse.maven.nisse</groupId>
+        <artifactId>extension</artifactId>
+        <version>0.4.6</version>
       </extension>
     </extensions>
     <pluginManagement>
