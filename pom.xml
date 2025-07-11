@@ -39,7 +39,7 @@
     <bouncy-castle.version>1.81</bouncy-castle.version>
     <grpc.version>1.72.0</grpc.version>
     <mapstruct.version>1.6.0</mapstruct.version>
-    <opentelemetry.version>1.51.0</opentelemetry.version>
+    <opentelemetry.version>1.52.0</opentelemetry.version>
     <opentelemetry-instrumentation.version>2.17.0</opentelemetry-instrumentation.version>
     <protobuf.version>4.30.2</protobuf.version>
     <spring-boot.version>3.5.3</spring-boot.version>
