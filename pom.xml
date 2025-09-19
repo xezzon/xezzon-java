@@ -44,7 +44,7 @@
     <spring-boot.version>3.5.6</spring-boot.version>
     <therapi-runtime-javadoc.version>0.15.0</therapi-runtime-javadoc.version>
     <!-- 插件版本 -->
-    <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
     <!-- 幽灵依赖 -->
     <!-- cn.hutool/hutool-bom -->
     <hutool.version>5.8.34</hutool.version>
