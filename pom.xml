@@ -34,7 +34,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- 依赖版本 -->
-    <bouncy-castle.version>1.82</bouncy-castle.version>
     <grpc.version>1.72.0</grpc.version>
     <kotlin.version>2.2.20</kotlin.version>
     <mapstruct.version>1.6.3</mapstruct.version>
@@ -77,16 +76,6 @@
         <version>4.5.0</version>
       </dependency>
       <dependency>
-        <groupId>org.bouncycastle</groupId>
-        <artifactId>bcprov-jdk18on</artifactId>
-        <version>${bouncy-castle.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.bouncycastle</groupId>
-        <artifactId>bcpkix-jdk18on</artifactId>
-        <version>${bouncy-castle.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
         <version>${mapstruct.version}</version>
@@ -117,6 +106,13 @@
         <version>5.1.0</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bc-jdk18on-bom</artifactId>
+        <version>1.82</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava-bom</artifactId>
