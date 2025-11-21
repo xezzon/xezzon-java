@@ -39,7 +39,7 @@
     <mapstruct.version>1.6.3</mapstruct.version>
     <opentelemetry-instrumentation.version>2.21.0</opentelemetry-instrumentation.version>
     <protobuf.version>4.30.2</protobuf.version>
-    <spring-boot.version>3.5.7</spring-boot.version>
+    <spring-boot.version>4.0.0</spring-boot.version>
     <therapi-runtime-javadoc.version>0.15.0</therapi-runtime-javadoc.version>
     <!-- 插件版本 -->
     <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
