@@ -37,7 +37,6 @@
     <grpc.version>1.72.0</grpc.version>
     <kotlin.version>2.2.21</kotlin.version>
     <mapstruct.version>1.6.3</mapstruct.version>
-    <opentelemetry.version>1.56.0</opentelemetry.version>
     <opentelemetry-instrumentation.version>2.21.0</opentelemetry-instrumentation.version>
     <protobuf.version>4.30.2</protobuf.version>
     <spring-boot.version>3.5.7</spring-boot.version>
@@ -49,18 +48,22 @@
     <hutool.version>5.8.34</hutool.version>
     <!-- io.micronaut.platform/micronaut-platform -->
     <micronaut.version>4.7.1</micronaut.version>
-    <!-- org.springframework.cloud/spring-cloud-dependencies -->
-    <spring-cloud.version>2024.0.0</spring-cloud.version>
-    <!-- io.github.openfeign.querydsl/querydsl-bom -->
-    <openfeign-querydsl.version>6.9</openfeign-querydsl.version>
-    <!-- com.querydsl/querydsl-bom -->
-    <querydsl.version>5.1.0</querydsl.version>
     <!-- nexus-staging-maven-plugin -->
     <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
-    <!-- com.alibaba/transmittable-thread-local -->
-    <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
+    <!-- io.github.openfeign.querydsl/querydsl-bom -->
+    <openfeign-querydsl.version>6.9</openfeign-querydsl.version>
+    <!-- io.opentelemetry/opentelemetry-bom -->
+    <opentelemetry.version>1.56.0</opentelemetry.version>
+    <!-- com.querydsl/querydsl-bom -->
+    <querydsl.version>5.1.0</querydsl.version>
     <!-- com.ly.smart-doc/smart-doc-maven-plugin -->
     <smart-doc-maven-plugin.version>3.0.7</smart-doc-maven-plugin.version>
+    <!-- org.springframework.cloud/spring-cloud-dependencies -->
+    <spring-cloud.version>2024.0.0</spring-cloud.version>
+    <!-- org.testcontainers/testcontainers-bom -->
+    <testcontainers.version>2.0.2</testcontainers.version>
+    <!-- com.alibaba/transmittable-thread-local -->
+    <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
   </properties>
 
   <dependencyManagement>
@@ -148,20 +151,6 @@
             <artifactId>jackson-databind</artifactId>
           </exclusion>
         </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.testcontainers</groupId>
-        <artifactId>testcontainers-bom</artifactId>
-        <version>2.0.2</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>io.opentelemetry</groupId>
-        <artifactId>opentelemetry-bom</artifactId>
-        <version>${opentelemetry.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>io.opentelemetry.instrumentation</groupId>
