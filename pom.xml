@@ -6,7 +6,7 @@
 
   <groupId>io.github.xezzon</groupId>
   <artifactId>xezzon-java</artifactId>
-  <version>4-SNAPSHOT</version>
+  <version>5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
