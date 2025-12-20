@@ -393,14 +393,14 @@
           <version>4.1.1</version>
           <configuration>
             <protocVersion>${protobuf.version}</protocVersion>
-            <binaryMavenPlugins>
-              <binaryMavenPlugin>
+            <plugins>
+              <plugin kind="binary-maven">
                 <groupId>io.grpc</groupId>
                 <artifactId>protoc-gen-grpc-java</artifactId>
                 <version>${grpc.version}</version>
                 <options>jakarta_omit,@generated=omit</options>
-              </binaryMavenPlugin>
-            </binaryMavenPlugins>
+              </plugin>
+            </plugins>
           </configuration>
           <executions>
             <execution>
