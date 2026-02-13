@@ -37,7 +37,7 @@
     <grpc.version>1.72.0</grpc.version>
     <kotlin.version>2.3.10</kotlin.version>
     <mapstruct.version>1.6.3</mapstruct.version>
-    <opentelemetry-instrumentation.version>2.24.0</opentelemetry-instrumentation.version>
+    <opentelemetry-instrumentation.version>2.25.0</opentelemetry-instrumentation.version>
     <protobuf.version>4.30.2</protobuf.version>
     <spring-boot.version>4.0.2</spring-boot.version>
     <therapi-runtime-javadoc.version>0.15.0</therapi-runtime-javadoc.version>
