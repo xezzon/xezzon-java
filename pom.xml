@@ -22,7 +22,7 @@
   <scm>
     <connection>scm:git:https://github.com/xezzon/xezzon-java.git</connection>
     <developerConnection>scm:git:git@github.com:xezzon/xezzon-java.git</developerConnection>
-    <url>http://github.com/xezzon/xezzon-java/tree/main</url>
+    <url>https://github.com/xezzon/xezzon-java/tree/main</url>
   </scm>
   <developers>
     <developer>
@@ -126,14 +126,7 @@
       <dependency>
         <groupId>io.github.openfeign</groupId>
         <artifactId>feign-bom</artifactId>
-        <version>13.12</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.grpc</groupId>
-        <artifactId>spring-grpc-dependencies</artifactId>
-        <version>1.1.0</version>
+        <version>13.13</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
