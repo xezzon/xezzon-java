@@ -388,7 +388,7 @@
           <artifactId>protobuf-maven-plugin</artifactId>
           <version>5.1.3</version>
           <configuration>
-            <protoc kind="binary-maven" combine.self="merge">
+            <protoc kind="binary-maven" combine.self="override">
               <version>${protobuf.version}</version>
             </protoc>
             <plugins>
